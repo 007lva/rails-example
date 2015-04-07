@@ -1,12 +1,10 @@
 #!/bin/bash
 set -e
 
-# google-chrome --version
-
-echo '--- bundling'
+echo '--- :bundler: Bundling'
 bundle
 
-echo '--- preparing database'
+echo '--- :postgres: Preparing database'
 ./bin/rake db:create
 ./bin/rake db:schema:load
 
@@ -14,5 +12,5 @@ echo '--- preparing database'
 # ./bin/rake ts:configure
 # ./bin/rake ts:start
 
-echo '--- running specs'
+echo '--- :rspec: Running specs'
 ./bin/rspec
