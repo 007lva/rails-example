@@ -4,7 +4,7 @@ set -e
 echo '--- :bundler: Bundling'
 bundle
 
-echo '--- :postgres: Preparing database'
+echo "--- :$DATABASE_ADAPTER: Preparing database"
 ./bin/rake db:create
 ./bin/rake db:schema:load
 
