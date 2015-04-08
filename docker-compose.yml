@@ -9,7 +9,7 @@ app:
     PGHOST: postgres
     PGUSER: postgres
     MYSQL_HOST: mysql
-    USER: mysql
+    MYSQL_USER: mysql
     REDIS_URL: redis://redis
     MEMCACHE_SERVERS: memcache
     DATABASE_ADAPTER:
