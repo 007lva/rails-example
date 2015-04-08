@@ -12,6 +12,7 @@ app:
     USER: mysql
     REDIS_URL: redis://redis
     MEMCACHE_SERVERS: memcache
+    DATABASE_ADAPTER:
 postgres:
   image: postgres
 mysql:
