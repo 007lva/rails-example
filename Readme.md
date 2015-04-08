@@ -1,5 +1,7 @@
 # Buildkite Rails Example
 
+[![Build status](https://badge.buildkite.com/5de65f90934634838d4badeefd01d0adde86092918b4ba3ad4.svg)](https://buildkite.com/buildkite/rails-example)
+
 Use this as a guide on how to test Rails applications on Buildkite
 
 ## Databases
@@ -30,5 +32,4 @@ When spinning up Google Chrome, you need to make sure the `--no-sandbox` argumen
 
 ```bash
 brew install postgres mysql
-brew install sphinx --pgsql --mysql
 ```
