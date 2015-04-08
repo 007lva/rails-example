@@ -21,7 +21,7 @@ RUN cd /tmp && curl -L -O https://bitbucket.org/ariya/phantomjs/downloads/phanto
 WORKDIR /tmp
 ADD Gemfile Gemfile
 ADD Gemfile.lock Gemfile.lock
-RUN bundle install
+RUN bundle install -j8
 
 ADD . /app
 WORKDIR /app
