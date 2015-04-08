@@ -10,17 +10,17 @@ app:
     PGUSER: postgres
     MYSQL_HOST: mysql
     MYSQL_USER: mysql
-    MYSQL_PASS: password
+    MYSQL_PASSWORD: password
     REDIS_URL: redis://redis
     MEMCACHE_SERVERS: memcache
     DATABASE_ADAPTER:
 postgres:
   image: postgres
 mysql:
-  image: tutum/mysql
+  image: mysql
   environment:
     MYSQL_USER: mysql
-    MYSQL_PASS: password
+    MYSQL_PASSWORD: password
 redis:
   image: redis
 memcache:
