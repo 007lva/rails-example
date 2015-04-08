@@ -1,10 +1,21 @@
+mysql:
+  image: mysql
+  environment:
+    MYSQL_USER: mysql
+    MYSQL_PASSWORD: password
+postgres:
+  image: postgres
+redis:
+  image: redis
+memcache:
+  image: tutum/memcached
 app:
   build: .
   links:
-    - postgres:postgres
-    - mysql:mysql
-    - redis:redis
-    - memcache:memcache
+    - postgres
+    - mysql
+    - redis
+    - memcache
   environment:
     PGHOST: postgres
     PGUSER: postgres
@@ -14,14 +25,3 @@ app:
     REDIS_URL: redis://redis
     MEMCACHE_SERVERS: memcache
     DATABASE_ADAPTER:
-postgres:
-  image: postgres
-mysql:
-  image: mysql
-  environment:
-    MYSQL_USER: mysql
-    MYSQL_PASSWORD: password
-redis:
-  image: redis
-memcache:
-  image: tutum/memcached
