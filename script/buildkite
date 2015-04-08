@@ -8,7 +8,7 @@ bundle
 
 echo "--- :$DATABASE_ADAPTER: Preparing database"
 
-until nc -z mysql 3306; do
+until nc -z $MYSQL_1_PORT_3306_TCP_ADDR $MYSQL_1_PORT_3306_TCP_PORT; do
   echo "$(date) - Waiting for MySQL to boot"
   sleep 1
 done
