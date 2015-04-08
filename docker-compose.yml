@@ -1,16 +1,21 @@
 app:
   build: .
   links:
-    - db:db
+    - postgres:postgres
+    - mysql:mysql
     - redis:redis
     - memcache:memcache
   environment:
-    PGHOST: db
+    PGHOST: postgres
     PGUSER: postgres
+    MYSQL_HOST: mysql
+    USER: mysql
     REDIS_URL: redis://redis
     MEMCACHE_SERVERS: memcache
-db:
+postgres:
   image: postgres
+mysql:
+  image: mysql
 redis:
   image: redis
 memcache:
