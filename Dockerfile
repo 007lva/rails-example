@@ -6,6 +6,9 @@ RUN apt-get update -qq
 # Install the postgres client
 RUN apt-get install -y postgresql-client
 
+# Install netcat so we can wait for mysql
+RUN apt-get install -y netcat
+
 # Install node.js (javascript runtime for Ruby)
 RUN apt-get install -y curl && \
      curl -sL https://deb.nodesource.com/setup | bash - && \
