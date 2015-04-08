@@ -4,14 +4,14 @@ development:
   database: rails_example_development
   username: root
   password:
-  hostname: localhost
+  host: localhost
 
 test:
   adapter: mysql2
   database: rails_example_test
   username: <%= ENV['MYSQL_USER'] || "root" %>
   password:
-  hostname: <%= ENV['MYSQL_HOST'] || "localhost" %>
+  host: <%= ENV['MYSQL_HOST'] || "localhost" %>
 <% else %>
 development:
   adapter: postgresql
