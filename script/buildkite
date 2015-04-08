@@ -8,9 +8,5 @@ echo '--- :postgres: Preparing database'
 ./bin/rake db:create
 ./bin/rake db:schema:load
 
-# echo '--- setting up sphinx'
-# ./bin/rake ts:configure
-# ./bin/rake ts:start
-
 echo '--- :rspec: Running specs'
 ./bin/rspec

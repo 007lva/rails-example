@@ -30,9 +30,6 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-# For searching
-gem 'thinking-sphinx'
-
 group :development, :test do
   # For testing
   gem 'rspec-rails'
