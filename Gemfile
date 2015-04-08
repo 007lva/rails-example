@@ -44,8 +44,8 @@ group :development, :test do
   gem 'capybara'
 
   # Different ways of running headless tests
-  gem "selenium-webdriver"
-  gem "capybara-webkit"
+  # gem "selenium-webdriver"
+  # gem "capybara-webkit"
   gem "poltergeist"
 
   # Code coveage

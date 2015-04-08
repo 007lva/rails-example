@@ -36,6 +36,6 @@ BASH
   exec "#{tempfile.path}"
 end
 
-task :default => [ :all_specs ]
+task :default => [ :spec ]
 
 RailsExample::Application.load_tasks
