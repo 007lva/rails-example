@@ -7,8 +7,15 @@ echo '--- :bundler: Bundling'
 bundle
 
 echo "--- :$DATABASE_ADAPTER: Preparing database"
+
+until nc -z mysql 3306; do
+  echo "$(date) - Waiting for MySQL to boot"
+  sleep 1
+done
+
 ./bin/rake db:create
 ./bin/rake db:schema:load
+
 
 echo '--- :rspec: Running specs'
 ./bin/rspec
