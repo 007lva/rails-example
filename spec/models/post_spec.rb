@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Post do
-  let!(:post) { Post.create(:name => "Buildbox is great", :body => "Trust me!") }
+  let!(:post) { Post.create(:name => "Buildkite is great", :body => "Trust me!") }
 
   it "saves to the database" do
     latest_post = Post.last
@@ -11,7 +11,7 @@ describe Post do
   it "searches post records" do
     index
 
-    found_post = Post.search('buildbox').first
+    found_post = Post.search('buildkite').first
     expect(found_post).to eql(post)
   end
 end

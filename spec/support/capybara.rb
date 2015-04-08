@@ -9,7 +9,7 @@ Capybara.register_driver :firefox do |app|
 end
 
 Capybara.register_driver :chrome do |app|
-  args = ENV['BUILDBOX'] ? ['no-sandbox' ] : []
+  args = ENV['BUILDKITE'] ? ['no-sandbox' ] : []
   Capybara::Selenium::Driver.new(app, :browser => :chrome, :args => args)
 end
 

@@ -1,7 +1,6 @@
-# Buildbox Rails Example
+# Buildkite Rails Example
 
-
-Use this as a guide on how to test Rails applications on Buildbox
+Use this as a guide on how to test Rails applications on Buildkite
 
 ## Databases
 
