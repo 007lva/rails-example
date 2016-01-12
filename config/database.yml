@@ -21,13 +21,12 @@ development:
   database: rails_example_development
   pool: 5
   username: postgres
-  password:
 
 test:
   adapter: postgresql
   encoding: unicode
   database: rails_example_test
   pool: 5
-  username: postgres
-  password:
+  username: lvargas
+  password: lvargas
 <% end %>
